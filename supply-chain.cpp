@@ -17,6 +17,14 @@ std::string SHA256(const std::string& input) {
     return ss.str();
 }
 
-class SupplyChainBlock {}
+class SupplyChainBlock {
+    public: 
+        int index;
+        std::time_t timestamp;
+        std::string data;
+        std:: string previousHash;
+        std::string hash;
+        int nonce;
+};
 
 int main() {}
