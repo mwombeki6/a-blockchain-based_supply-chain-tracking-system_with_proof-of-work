@@ -25,6 +25,12 @@ class SupplyChainBlock {
         std:: string previousHash;
         std::string hash;
         int nonce;
+
+        SupplyChainBlock(int idx, const std::string& blockData, const std::string& prevHash) : 
+            index(idx), data(blockData), previousHash(prevHash), nonce(0) {
+                timestamp = std::time(nullptr);
+                hash = calculateHash();
+            }
 };
 
 int main() {}
