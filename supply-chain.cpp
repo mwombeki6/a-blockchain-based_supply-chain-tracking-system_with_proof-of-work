@@ -35,7 +35,11 @@ public:
         hash = calculateHash();
     }
 
-    std::string calculateHash() const {}
+    std::string calculateHash() const {
+        std::stringstream ss;
+        ss << index << timestamp << data << previousHash << nonce;
+        return SHA256(ss.str());
+    }
 };
 
 int main() {}
