@@ -17,4 +17,6 @@ std::string SHA256(const std::string& input) {
     return ss.str();
 }
 
+class SupplyChainBlock {}
+
 int main() {}
