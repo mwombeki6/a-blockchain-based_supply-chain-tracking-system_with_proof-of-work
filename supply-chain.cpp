@@ -40,6 +40,10 @@ public:
         ss << index << timestamp << data << previousHash << nonce;
         return sha256(ss.str());
     }
+
+    void mineBlock(int difficulty) [
+        
+    ]
 };
 
 int main() {}
