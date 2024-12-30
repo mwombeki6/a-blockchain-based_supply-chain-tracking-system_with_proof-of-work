@@ -6,7 +6,7 @@
 #include <iomanip>
 #include <openssl/sha.h>
 
-std::string SHA256(const std::string &input)
+std::string sha256(const std::string &input)
 {
     unsigned char hash[SHA256_DIGEST_LENGTH];
     SHA256((unsigned char *)input.c_str(), input.size(), hash);
@@ -38,7 +38,7 @@ public:
     std::string calculateHash() const {
         std::stringstream ss;
         ss << index << timestamp << data << previousHash << nonce;
-        return SHA256(ss.str());
+        return sha256(ss.str());
     }
 };
 
