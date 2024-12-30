@@ -41,9 +41,14 @@ public:
         return sha256(ss.str());
     }
 
-    void mineBlock(int difficulty) [
-        
-    ]
+    void mineBlock(int difficulty) {
+        std::string target(difficulty, '0');
+        while (hash.substr(0, difficulty) != target) {
+            ++nonce;
+            hash = calculateHash();
+        }
+        std::cout << "Block mined: " << hash << std::endl;
+    }
 };
 
 int main() {}
