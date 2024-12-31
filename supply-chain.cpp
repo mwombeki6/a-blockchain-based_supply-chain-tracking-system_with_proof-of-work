@@ -62,7 +62,12 @@ public:
         difficulty = 3;
     }
 
-    void addBlock(const std)
+    void addBlock(const std::string& productInfo) {
+        const SupplyChainBlock& lastBlock = chain.back();
+        SupplyChainBlock newBlock(chain.size(), productInfo, lastBlock.hash);
+        newBlock.mineBlock(difficulty);
+        chain.push_back(newBlock);
+    }
 };
 
 int main() {}
