@@ -68,6 +68,16 @@ public:
         newBlock.mineBlock(difficulty);
         chain.push_back(newBlock);
     }
+
+    void printChain() const {
+        for (const auto& block : chain) {
+            std::cout << "Index: " << block.index << "\n";
+            std::cout << "Timestamp: " << block.timestamp << "\n";
+            std::cout << "Data: " << block.data << "\n";
+            std::cout << "Previous Hash: " << block.previousHash << "\n";
+            std::cout << "Hash: " << block.hash << "\n\n";
+        }
+    }
 };
 
 int main() {}
