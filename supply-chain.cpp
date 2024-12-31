@@ -78,6 +78,14 @@ public:
             std::cout << "Hash: " << block.hash << "\n\n";
         }
     }
+
+private:
+    std::vector<SupplyChainBlock> chain;
+    int difficulty;
+
+    SupplyChainBlock createGenesisBlock() {
+        return SupplyChainBlock(0, "Genesis Block - Start of Supply Chain", "0");
+    }
 };
 
 int main() {}
