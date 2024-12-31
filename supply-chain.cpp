@@ -35,20 +35,34 @@ public:
         hash = calculateHash();
     }
 
-    std::string calculateHash() const {
+    std::string calculateHash() const
+    {
         std::stringstream ss;
         ss << index << timestamp << data << previousHash << nonce;
         return sha256(ss.str());
     }
 
-    void mineBlock(int difficulty) {
+    void mineBlock(int difficulty)
+    {
         std::string target(difficulty, '0');
-        while (hash.substr(0, difficulty) != target) {
+        while (hash.substr(0, difficulty) != target)
+        {
             ++nonce;
             hash = calculateHash();
         }
         std::cout << "Block mined: " << hash << std::endl;
     }
+};
+
+class SupplyChain
+{
+public:
+    SupplyChain() {
+        chain.emplace_back(createGenesisBlock());
+        difficulty = 3;
+    }
+
+    void addBlock(const std)
 };
 
 int main() {}
