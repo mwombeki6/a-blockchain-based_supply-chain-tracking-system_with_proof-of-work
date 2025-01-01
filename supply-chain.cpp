@@ -84,7 +84,7 @@ private:
     int difficulty;
 
     SupplyChainBlock createGenesisBlock() {
-        return SupplyChainBlock(0, "Genesis Block - Start of Supply Chain", "0");
+        return SupplyChainBlock(0, "Genesis Block - Start of Supply Chain Block", "0");
     }
 };
 
