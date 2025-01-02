@@ -88,4 +88,8 @@ private:
     }
 };
 
-int main() {}
+int main() {
+    SupplyChain supplyChain;
+
+    std::cout << "Adding product: Widget A (Manufactured at Factory 1)...\n";
+}
