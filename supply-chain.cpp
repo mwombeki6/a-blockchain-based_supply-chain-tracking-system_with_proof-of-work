@@ -92,4 +92,7 @@ int main() {
     SupplyChain supplyChain;
 
     std::cout << "Adding product: Widget A (Manufactured at Factory 1)...\n";
+    supplyChain.addBlock("Widget A: Manufactured at Factory 1");
+
+    std::cout << "Adding product: Widget A (Shipped by Logistics Company X)...\n"
 }
