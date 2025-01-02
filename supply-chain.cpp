@@ -101,4 +101,6 @@ int main() {
     supplyChain.addBlock("Widget A: Received by Retailer Y");
 
     supplyChain.printChain();
+
+    return 0;
 }
