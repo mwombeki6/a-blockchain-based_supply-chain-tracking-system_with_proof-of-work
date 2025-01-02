@@ -96,4 +96,9 @@ int main() {
 
     std::cout << "Adding product: Widget A (Shipped by Logistics Company X)...\n";
     supplyChain.addBlock("Widget A: Shipped by Logistics Company X");
+
+    std::cout << "Adding product: Widget A (Received by Retailer Y)...\n";
+    supplyChain.addBlock("Widget A: Received by Retailer Y");
+
+    supplyChain.printChain();
 }
